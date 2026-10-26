@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/x64/Debug
+/media player/x64/Debug
+/.vs
+/media player.vcxproj.user

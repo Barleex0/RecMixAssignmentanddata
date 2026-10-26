@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="media player.vcxproj" Id="6f2e2e66-7718-4fce-aea0-d01309f38dfa" />
+</Solution>
