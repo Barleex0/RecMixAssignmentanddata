@@ -113,6 +113,26 @@ int searchMedia(
     cout << "not found";
     return -1;
 }
+// Search Function 2
+Media* searchMedia(
+    Media* library[],
+    //Why pass the size when its set as a constant
+    // int size,
+    int target
+) {
+    // TODO: Loop through library
+    // Compare titles using getTitle()
+    // Return matching index or -1
+
+    if (target < SIZE) { return library[target]; }
+
+
+    cout << "\n not found \n";
+    return nullptr;
+}
+
+
+
 
 int main() {
 
@@ -146,6 +166,9 @@ int main() {
     cout << searchMedia(library, "Words") << '\n';
     // TODO: Perform an unsuccessful search
 
+    cout << searchMedia(library, 1)->getTitle << '\n';
+
+    cout << searchMedia(library, 6) << '\n';
     // TODO: Delete all dynamically
     // allocated objects
 

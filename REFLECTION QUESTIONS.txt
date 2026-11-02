@@ -1,20 +1,18 @@
-Why is Media considered an abstract class?
+    What is the difference between function overloading and function overriding?
+    Overloading has different arguments overriding has the same arguments
 
-Because it contains virtual functions.
+    How does operator overloading make your Media class easier to use?
 
+    You can call the same function with different arguments to get the results you expect
 
-What is the purpose of a pure virtual function?
+    What is the purpose of template <typename T>?
 
-To enable a function to be called by its derivative classes without maintaining a definition of its own.
+    To create dynamic template functions
 
-What does the * mean in Media* library[5]?
+    Why can Playlist<Media*> store pointers to songs, podcasts, and audiobooks?
 
-It indicates that the library is a collection of Media pointers
+    Because all of those classes inherit the media class
 
-Why can a pointer of type Media* refer to an object of type Song?
+    How does using a class template reduce duplicated code?
 
-Song is a derivitive of type Media and thus can be referred this way
-
-Why should objects created using new be released using delete?
-
-Because they will not delete themselves and are not always going to be garbage collected. 
+    Because you don't have to write seperate definitions for each case.
