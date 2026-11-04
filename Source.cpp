@@ -20,6 +20,12 @@ public:
             << "Duration :" << duration << '\n';
     };
 
+    bool operator==(const Media& other) const {
+        if (title == other.getTitle()) { return true; };
+        return false;
+    };
+
+
     virtual ~Media() {}
 
     string getTitle() const {
@@ -89,6 +95,49 @@ public:
         cout << "Playing Audiobook :" << getTitle() << '\n';
     }
 };
+ const int PLAYLISTSIZE = 10;
+template <typename T>
+class Playlist {
+private:
+   
+    T items[PLAYLISTSIZE];
+    int count;
+
+public:
+    Playlist() : count(0) {}
+
+    void addItem(T item) {
+        // TODO: Add item if space is available
+        if (count < PLAYLISTSIZE) 
+        { 
+        items[count] = item;
+        count++;
+        }
+    }
+
+    void displayPlaylist() const {
+        // TODO: Display playlist items
+        for (int i = 0; i < count; i++)
+        {
+            items[i]->displayInfo();
+        }
+    }
+
+    int getCount() const {
+        // TODO: Return number of items
+        return count;
+    }
+};
+
+
+
+
+
+
+
+
+
+
 
 // Search Function
 int searchMedia(
@@ -143,6 +192,17 @@ int main() {
     new Podcast("Pond","peppernotreal",25,10),
     new Audiobook("How to Read","Booker B Booker",165,"Professor Bookmaxxing")
     };
+    cout << "\n ===================== Storage check and display +++++++++++++++++++++++++++++++++++++ \n";
+    Playlist<Media*> storage;
+
+    storage.addItem(library[0]);
+    storage.addItem(library[1]);
+    storage.addItem(library[2]);
+    storage.addItem(library[4]);
+
+    storage.displayPlaylist();
+
+
 
     // TODO: Create 5 objects using new
     // 2 Songs, 2 Podcasts, 1 Audiobook
@@ -166,11 +226,16 @@ int main() {
     cout << searchMedia(library, "Words") << '\n';
     // TODO: Perform an unsuccessful search
 
-    cout << searchMedia(library, 1)->getTitle << '\n';
+    cout << searchMedia(library, 1)->getTitle() << '\n';
 
     cout << searchMedia(library, 6) << '\n';
     // TODO: Delete all dynamically
     // allocated objects
+
+
+
+
+
 
     delete [] &library;
  
