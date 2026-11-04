@@ -206,6 +206,10 @@ int main() {
 
     // TODO: Create 5 objects using new
     // 2 Songs, 2 Podcasts, 1 Audiobook
+    cout << "\n++++Test Equality+++++\n";
+
+    if (library[0] == library[0]) { cout << "titles match\n"; }
+    else { cout << "they do not match\n"; };
 
     cout << "=== RECMIX MEDIA LIBRARY ===\n";
 
