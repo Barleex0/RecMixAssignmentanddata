@@ -1,0 +1,20 @@
+Why is Media considered an abstract class?
+
+Because it contains virtual functions.
+
+
+What is the purpose of a pure virtual function?
+
+To enable a function to be called by its derivative classes without maintaining a definition of its own.
+
+What does the * mean in Media* library[5]?
+
+It indicates that the library is a collection of Media pointers
+
+Why can a pointer of type Media* refer to an object of type Song?
+
+Song is a derivitive of type Media and thus can be referred this way
+
+Why should objects created using new be released using delete?
+
+Because they will not delete themselves and are not always going to be garbage collected. 
